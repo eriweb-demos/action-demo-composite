@@ -1,0 +1,10 @@
+name: 'Composite demo'
+description: 'Demonostrate composite actions'
+
+runs:
+  using: 'composite'
+  steps:
+    - run: echo 'this is a composite action'
+      shell: bash
+    - run: ${{ github.action_path }}/foo.sh
+      shell: bash
